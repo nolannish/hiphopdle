@@ -1,29 +1,16 @@
 'use client';
 // app/page.tsx
+import PageRedirectButton from "../components/PageRedirectButton";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center bg-gray-100 p-8">
-      <h1 className="text-5xl font-bold mb-8 text-gray-900">Welcome to My Next.js Page</h1>
-
+      <h1 className="text-5xl font-bold mb-8 text-gray-900">Hip-Hopdle</h1>
+      <p className="text-lg mb-12 py-4 text-gray-900">inspired by the original NYT Wordle, as well as the many other -dle games out there</p>
       <div className="flex gap-4">
-        <button 
-          onClick={() => {
-            window.location.href = "/album"
-          }}
-          className="px-6 py-3 rounded-xl bg-blue-600 text-white text-lg hover:bg-blue-700 transition"
-        >
-          Album
-        </button>
-
-        <button 
-          onClick={() => {
-            window.location.href = "/rapper"
-          }}
-          className="px-6 py-3 rounded-xl bg-blue-600 text-white text-lg hover:bg-blue-700 transition"
-        >
-          Rapper
-        </button>
+        <PageRedirectButton targetUrl="/album" pageName="Album" />
+        <PageRedirectButton targetUrl="/rapper" pageName="Rapper" />
+        <PageRedirectButton targetUrl="/song" pageName="Song" />
       </div>
     </main>
   );
