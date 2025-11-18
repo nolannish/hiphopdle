@@ -1,6 +1,7 @@
 'use client';
 
 import dynamic from 'next/dynamic';
+
 const GuessDropdown = dynamic(() => import('@/components/GuessDropdown'), {
   ssr: false,
 });
